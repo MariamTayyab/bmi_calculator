@@ -17,17 +17,27 @@ class _InputPageState extends State<InputPage> {
         children: [
           Expanded(child:Row(
             children: [
-              Expanded(child: RefactorContainerCode(),
+              Expanded(child: RefactorContainerCode(
+                Colors: Colors.blue,
+              ),
                 ),
-              Expanded(child:  RefactorContainerCode(),)
+              Expanded(child:  RefactorContainerCode(
+                Colors: Colors.red,
+              ),)
             ],
           )
           ),
-          Expanded(child:  RefactorContainerCode(),),
+          Expanded(child:  RefactorContainerCode(
+            Colors: Colors.green,
+          ),),
           Expanded(child:Row(
           children: [
-          Expanded(child:  RefactorContainerCode(),),
-          Expanded(child:  RefactorContainerCode(),
+          Expanded(child:  RefactorContainerCode(
+            Colors: Colors.blue,
+          ),),
+          Expanded(child:  RefactorContainerCode(
+            Colors: Colors.blue,
+          ),
           )
         ],
       )
@@ -39,15 +49,17 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RefactorContainerCode extends StatelessWidget {
-
+Color Colors;
+RefactorContainerCode({@required this.Colors});
   @override
   Widget build(BuildContext context) {
     return Container(
           margin: EdgeInsets.all(15.0),
       decoration: BoxDecoration(
-        color: Color(0xFF1D1E33),
+        color: Colors,
         borderRadius: BorderRadius.circular(10.0)
-      ),
+    ),
+
         );
   }
 }
