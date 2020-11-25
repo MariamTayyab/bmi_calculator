@@ -1,3 +1,6 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter/cupertino.dart';
+
 
 import 'package:flutter/material.dart';
 
@@ -19,11 +22,15 @@ class _InputPageState extends State<InputPage> {
             children: [
               Expanded(child: RefactorContainerCode(
                 Colors: Colors.yellow,
+                CardWidget: new RepeatTextAndIcon(
+
+                ),
 
               ),
                 ),
               Expanded(child:  RefactorContainerCode(
                 Colors: Colors.red,
+                CardWidget: new RepeatTextAndIcon(),
               ),)
             ],
           )
@@ -49,10 +56,33 @@ class _InputPageState extends State<InputPage> {
   }
 }
 
+class RepeatTextAndIcon extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+        FontAwesomeIcons.male,
+          size: 100.0,
+        ),
+        SizedBox(
+          height: 15.0,
+        ),
+        Text(
+          'MALE',
+
+        ),
+      ],
+    );
+  }
+}
+
 class RefactorContainerCode extends StatelessWidget {
 final Color Colors;
 final Widget CardWidget;
-RefactorContainerCode({@required this.Colors , this.CardWidget});
+RefactorContainerCode({ this.Colors , this.CardWidget});
   @override
   Widget build(BuildContext context) {
     return Container(
