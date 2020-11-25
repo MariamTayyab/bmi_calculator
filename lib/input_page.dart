@@ -23,6 +23,8 @@ class _InputPageState extends State<InputPage> {
               Expanded(child: RefactorContainerCode(
                 Colors: Colors.yellow,
                 CardWidget: new RepeatTextAndIcon(
+                  iconData: FontAwesomeIcons.male,
+                  label: 'MALE',
 
                 ),
 
@@ -30,7 +32,11 @@ class _InputPageState extends State<InputPage> {
                 ),
               Expanded(child:  RefactorContainerCode(
                 Colors: Colors.red,
-                CardWidget: new RepeatTextAndIcon(),
+                CardWidget: new RepeatTextAndIcon(
+                  iconData: FontAwesomeIcons.female,
+                  label: 'FEMALE',
+
+                ),
               ),)
             ],
           )
@@ -57,21 +63,23 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RepeatTextAndIcon extends StatelessWidget {
-
+RepeatTextAndIcon({@required this.iconData,this.label});
+final IconData iconData;
+final String label;
   @override
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
-        FontAwesomeIcons.male,
+      iconData,
           size: 100.0,
         ),
         SizedBox(
           height: 15.0,
         ),
         Text(
-          'MALE',
+          label,
 
         ),
       ],
@@ -80,9 +88,11 @@ class RepeatTextAndIcon extends StatelessWidget {
 }
 
 class RefactorContainerCode extends StatelessWidget {
-final Color Colors;
+
+  final Color Colors;
 final Widget CardWidget;
 RefactorContainerCode({ this.Colors , this.CardWidget});
+
   @override
   Widget build(BuildContext context) {
     return Container(
