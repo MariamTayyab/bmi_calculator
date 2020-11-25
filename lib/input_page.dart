@@ -15,7 +15,16 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   Color maleColor = deactiveColor;
   Color femaleColor = deactiveColor;
-  void updateColor(int gender){}
+  void updateColor(int gender){
+    if(gender ==1){
+      maleColor = activeColor;
+      femaleColor = deactiveColor;
+    }
+    if(gender ==2){
+      maleColor = deactiveColor;
+      femaleColor = activeColor;
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,27 +35,48 @@ class _InputPageState extends State<InputPage> {
         children: [
           Expanded(child:Row(
             children: [
-              Expanded(child: RefactorContainerCode(
+              Expanded(
+
+                child: new GestureDetector(
+          onTap: (){
+            setState(() {
+    updateColor(1);
+
+            });
+  },
+                child :  RefactorContainerCode(
                 Colors: maleColor,
-                CardWidget: new RepeatTextAndIcon(
+                CardWidget:  RepeatTextAndIcon(
                   iconData: FontAwesomeIcons.male,
                   label: 'MALE',
 
                 ),
-
+                ),
               ),
-                ),
-              Expanded(child:  RefactorContainerCode(
-                Colors: femaleColor,
-                CardWidget: new RepeatTextAndIcon(
-                  iconData: FontAwesomeIcons.female,
-                  label: 'FEMALE',
+              ),
 
-                ),
-              ),)
+
+              Expanded(
+                child:  GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      updateColor(2);
+
+                    });
+                  },
+                  child: RefactorContainerCode(
+                  Colors: femaleColor,
+                  CardWidget: new RepeatTextAndIcon(
+                    iconData: FontAwesomeIcons.female,
+                    label: 'FEMALE',
+
+                  ),
+              ),
+                ),)
             ],
           )
           ),
+
           Expanded(child:  RefactorContainerCode(
             Colors: Colors.green,
           ),),
