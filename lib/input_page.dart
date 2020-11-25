@@ -23,7 +23,7 @@ class _InputPageState extends State<InputPage> {
           Expanded(child:Row(
             children: [
               Expanded(child: RefactorContainerCode(
-                Colors: Colors.yellow,
+                Colors: Colors.orangeAccent,
                 CardWidget: new RepeatTextAndIcon(
                   iconData: FontAwesomeIcons.male,
                   label: 'MALE',
