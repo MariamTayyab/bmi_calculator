@@ -18,7 +18,8 @@ class _InputPageState extends State<InputPage> {
           Expanded(child:Row(
             children: [
               Expanded(child: RefactorContainerCode(
-                Colors: Colors.blue,
+                Colors: Colors.yellow,
+
               ),
                 ),
               Expanded(child:  RefactorContainerCode(
@@ -33,10 +34,10 @@ class _InputPageState extends State<InputPage> {
           Expanded(child:Row(
           children: [
           Expanded(child:  RefactorContainerCode(
-            Colors: Colors.blue,
+            Colors: Colors.orange,
           ),),
           Expanded(child:  RefactorContainerCode(
-            Colors: Colors.blue,
+            Colors: Colors.deepOrangeAccent,
           ),
           )
         ],
@@ -49,12 +50,14 @@ class _InputPageState extends State<InputPage> {
 }
 
 class RefactorContainerCode extends StatelessWidget {
-Color Colors;
-RefactorContainerCode({@required this.Colors});
+final Color Colors;
+final Widget CardWidget;
+RefactorContainerCode({@required this.Colors , this.CardWidget});
   @override
   Widget build(BuildContext context) {
     return Container(
           margin: EdgeInsets.all(15.0),
+      child: CardWidget,
       decoration: BoxDecoration(
         color: Colors,
         borderRadius: BorderRadius.circular(10.0)
