@@ -209,7 +209,7 @@ class _InputPageState extends State<InputPage> {
               padding: EdgeInsets.only(bottom: 20.0),
               width: double.infinity,
               height: 70.0,
-              color: Colors.lightGreen,
+              color: Colors.purple,
               child: Center(
                 child: Text(
                   "Calculate",
