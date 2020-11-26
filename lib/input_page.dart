@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +18,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
 
   Gender selectedGender;
+  int SliderHeight= 180;
 
 
 
@@ -90,7 +90,7 @@ class _InputPageState extends State<InputPage> {
                       children: <Widget>[
                         Text(
 
-                          '180',
+                          SliderHeight.toString(),
                           style:kNumberStyle,
                         ),
                         Text(
@@ -99,6 +99,17 @@ class _InputPageState extends State<InputPage> {
                         ),
                       ],
                     ),
+                   Slider(value: SliderHeight.toDouble(),
+                       min: 120.0,
+                       max: 220.0,
+    activeColor : Color(0xFF1D1E33),
+     inactiveColor : Color(0xFF111328),
+                   onChanged: (double newValue){
+                     setState(() {
+                       SliderHeight=newValue.round();
+                     });
+                   },
+                   )
                   ],
                 ),
               ),
