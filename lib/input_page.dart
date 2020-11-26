@@ -1,4 +1,5 @@
 
+import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'icontextfile.dart';
@@ -129,9 +130,23 @@ class _InputPageState extends State<InputPage> {
                     SliderWeight.toString(),
                   style: kNumberStyle,
 
-                )
-
-              ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center ,
+                  children: [
+                  RoundIcon(
+                      iconData:FontAwesomeIcons.minus ,
+                      onPress: (){
+                        setState(() {
+                          SliderWeight--;
+                        });
+                      },
+                  ),
+                    SizedBox(width: 10.0,),
+                    RoundIcon(iconData: null),
+                  ],
+                        ),
+                      ],
             ),
           ),),
           Expanded(child:  RefactorContainerCode(
@@ -147,6 +162,27 @@ class _InputPageState extends State<InputPage> {
   }
 }
 
+class RoundIcon extends StatelessWidget{
+
+  RoundIcon ({@required this.iconData,this.onPress, });
+  final IconData iconData;
+  final Function onPress;
+  @override
+  Widget build(BuildContext context) {
+   return RawMaterialButton(
+     child: Icon(iconData),
+     onPressed: onPress,
+     elevation: 6.0,
+     constraints: BoxConstraints.tightFor(
+       height: 56.0,
+       width: 56.0,
+     ),
+     shape: CircleBorder(),
+     fillColor: Color(0xFF4C4F5E),
+
+   );
+  }
+}
 
 
 
