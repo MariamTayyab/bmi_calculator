@@ -26,10 +26,10 @@ class CalculatorBrain {
   }
 
   String getInterpretation() {
-    if (_bmi >= 25) {
+    if (_bmi >= 40) {
       return 'you are overweighted try to excercise';
     }
-    if (_bmi >= 18.5) {
+    if (_bmi >= 30) {
       return ' you have Normal weight';
     }
     else {
