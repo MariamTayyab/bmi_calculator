@@ -120,6 +120,7 @@ class _InputPageState extends State<InputPage> {
           Expanded(child:  RefactorContainerCode(
             Colors: Colors.orange,
             CardWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text('WEIGHT',
                 style: klabelstyle,
