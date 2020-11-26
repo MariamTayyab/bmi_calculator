@@ -1,9 +1,9 @@
-import 'package:bmi_pratic_for_london/constantfile.dart';
 import 'package:flutter/material.dart';
+import 'constantFile.dart';
 
-class RepeatTextAndIcon extends StatelessWidget {
-  RepeatTextAndIcon({@required this.iconData,this.label});
-  final IconData iconData;
+class iconColumn extends StatelessWidget {
+  iconColumn({@required this.icon, this.label});
+  final IconData icon;
   final String label;
   @override
   Widget build(BuildContext context) {
@@ -11,16 +11,15 @@ class RepeatTextAndIcon extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
-          iconData,
-          size: 100.0,
+          icon,
+          size: 50.0,
         ),
         SizedBox(
-          height: 15.0,
+          height: 10.0,
         ),
         Text(
           label,
           style: kLabelStyle,
-
         ),
       ],
     );
