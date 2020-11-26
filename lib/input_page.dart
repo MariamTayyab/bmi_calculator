@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'icontextfile.dart';
@@ -80,9 +82,24 @@ class _InputPageState extends State<InputPage> {
           Expanded(child:  RefactorContainerCode(
             Colors: Colors.green,
             CardWidget: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
                  children: [
                    Text('HEIGHT',style: klabelstyle,),
-                 ],
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+
+                          '180',
+                          style:kNumberStyle,
+                        ),
+                        Text(
+                          'cm',
+                          style: klabelstyle,
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ),
           ),
