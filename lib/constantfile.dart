@@ -11,15 +11,15 @@ const kbottemContainerStyle = TextStyle(
 );
 
 const kLabelStyle = TextStyle(
-  fontSize: 20.0,
+  fontSize: 25.0,
 );
 const kNumberStyle = TextStyle(
-  fontSize: 50.0,
+  fontSize: 55.0,
   fontWeight: FontWeight.w900,
 );
 
 const kTitleTextStyle = TextStyle(
-  fontSize: 50.0,
+  fontSize: 55.0,
   fontWeight: FontWeight.bold,
 );
 
