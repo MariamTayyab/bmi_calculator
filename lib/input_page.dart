@@ -32,14 +32,13 @@ class _InputPageState extends State<InputPage> {
             children: [
               Expanded(
 
-                child: new GestureDetector(
-          onTap: (){
-            setState(() {
-                selectedGender = Gender.male;
 
-            });
-  },
                 child :  RefactorContainerCode(
+                  onPressed: (){
+                    setState(() {
+                      selectedGender=Gender.male;
+                    });
+                  },
                 Colors: selectedGender == Gender.male
                     ? activeColor
                     : deactiveColor ,
@@ -50,19 +49,18 @@ class _InputPageState extends State<InputPage> {
 
                 ),
                 ),
-              ),
+
               ),
 
 
               Expanded(
-                child:  GestureDetector(
-                  onTap: (){
-                    setState(() {
-                      selectedGender = Gender.female;
 
-                    });
-                  },
                   child: RefactorContainerCode(
+                    onPressed: (){
+                      setState(() {
+                        selectedGender=Gender.female;
+                      });
+                    },
                   Colors: selectedGender == Gender.female
                       ? activeColor
                       : deactiveColor ,
@@ -73,7 +71,8 @@ class _InputPageState extends State<InputPage> {
 
                   ),
               ),
-                ),)
+
+              )
             ],
           )
           ),
