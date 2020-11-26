@@ -2,8 +2,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'icontextfile.dart';
 import 'containerfile.dart';
-const activeColor = Color(0xFF1D1E33);
-const deactiveColor = Color(0xFF111328);
+import 'constantfile.dart';
+
 enum Gender{
   male,
   female,
@@ -79,7 +79,13 @@ class _InputPageState extends State<InputPage> {
 
           Expanded(child:  RefactorContainerCode(
             Colors: Colors.green,
-          ),),
+            CardWidget: Column(
+                 children: [
+                   Text('HEIGHT',style: klabelstyle,),
+                 ],
+                ),
+              ),
+          ),
           Expanded(child:Row(
           children: [
           Expanded(child:  RefactorContainerCode(
@@ -97,6 +103,8 @@ class _InputPageState extends State<InputPage> {
     );
   }
 }
+
+
 
 
 

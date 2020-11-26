@@ -1,3 +1,4 @@
+import 'package:bmi_pratic_for_london/constantfile.dart';
 import 'package:flutter/material.dart';
 
 class RepeatTextAndIcon extends StatelessWidget {
@@ -18,6 +19,7 @@ class RepeatTextAndIcon extends StatelessWidget {
         ),
         Text(
           label,
+          style: klabelstyle,
 
         ),
       ],
