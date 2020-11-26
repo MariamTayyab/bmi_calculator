@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'icontextfile.dart';
 import 'containerfile.dart';
 import 'constantfile.dart';
-
+import 'resultfile.dart';
 enum Gender{
   male,
   female,
@@ -166,7 +166,8 @@ class _InputPageState extends State<InputPage> {
             CardWidget: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text('AGE',
+                Text(
+                  'AGE',
                   style: klabelstyle,
                 ),
                 Text(
@@ -191,7 +192,7 @@ class _InputPageState extends State<InputPage> {
                       iconData:FontAwesomeIcons.plus ,
                       onPress: (){
                         setState(() {
-                          SliderWeight++
+                          SliderAge++
                           ;
                         });
                       },
@@ -208,6 +209,23 @@ class _InputPageState extends State<InputPage> {
         ],
       )
     ),
+          GestureDetector(
+           onTap: (){
+
+             Navigator.push(context,
+                 MaterialPageRoute(builder: (context) => ResultScreen()));
+
+           },
+         child: Container(
+            child:Center(
+            child: Text('Calculate', style: kLargeButtonStyle,),
+            ),
+           color: Color(0xFFEB1555),
+            margin: EdgeInsets.only(top: 10.0),
+            width: double.infinity,
+            height: 80.0,
+          ),
+          ),
         ],
       )
     );
