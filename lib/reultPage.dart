@@ -11,7 +11,7 @@ class ResultPage extends StatelessWidget {
         title: Text('BMI CALCULATOR'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(

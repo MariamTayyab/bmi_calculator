@@ -158,7 +158,7 @@ class _InputPageState extends State<InputPage> {
                   child: ReuseableContainer(
                     colorr: kactiveColor,
                     cardWidget: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           "Age",
