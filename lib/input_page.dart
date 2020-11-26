@@ -19,6 +19,7 @@ class _InputPageState extends State<InputPage> {
 
   Gender selectedGender;
   int SliderHeight= 180;
+  int SliderWeight=60;
 
 
 
@@ -118,6 +119,19 @@ class _InputPageState extends State<InputPage> {
           children: [
           Expanded(child:  RefactorContainerCode(
             Colors: Colors.orange,
+            CardWidget: Column(
+              children: <Widget>[
+                Text('WEIGHT',
+                style: klabelstyle,
+                ),
+                Text(
+                    SliderWeight.toString(),
+                  style: kNumberStyle,
+
+                )
+
+              ],
+            ),
           ),),
           Expanded(child:  RefactorContainerCode(
             Colors: Colors.deepOrangeAccent,
