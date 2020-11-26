@@ -134,16 +134,26 @@ class _InputPageState extends State<InputPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center ,
                   children: [
-                  RoundIcon(
+
+                    RoundIcon(
                       iconData:FontAwesomeIcons.minus ,
                       onPress: (){
                         setState(() {
                           SliderWeight--;
                         });
                       },
-                  ),
+                    ),
                     SizedBox(width: 10.0,),
-                    RoundIcon(iconData: null),
+                    RoundIcon(
+    iconData:FontAwesomeIcons.plus ,
+    onPress: (){
+    setState(() {
+    SliderWeight++
+    ;
+    });
+    },
+
+                    ),
                   ],
                         ),
                       ],
@@ -151,6 +161,7 @@ class _InputPageState extends State<InputPage> {
           ),),
           Expanded(child:  RefactorContainerCode(
             Colors: Colors.deepOrangeAccent,
+
           ),
           )
         ],
