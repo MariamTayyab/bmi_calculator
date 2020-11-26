@@ -187,6 +187,16 @@ class _InputPageState extends State<InputPage> {
                       },
                     ),
                     SizedBox(width: 10.0,),
+                    RoundIcon(
+                      iconData:FontAwesomeIcons.plus ,
+                      onPress: (){
+                        setState(() {
+                          SliderWeight++
+                          ;
+                        });
+                      },
+
+                    ),
 
                   ],
                 ),
