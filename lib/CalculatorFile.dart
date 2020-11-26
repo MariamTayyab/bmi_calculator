@@ -14,10 +14,10 @@ class CalculatorBrain {
 
 
   String getResult() {
-    if (_bmi >= 25) {
+    if (_bmi >= 30) {
       return 'Overweight';
     }
-    if (_bmi >= 18.5) {
+    if (_bmi >= 20) {
       return 'Normal';
     }
     else {
